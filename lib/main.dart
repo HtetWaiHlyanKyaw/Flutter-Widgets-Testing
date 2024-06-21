@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:new_project/pages/first_page.dart';
+import 'package:new_project/pages/second_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,20 +20,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: Scaffold(
-          body: Center(
-            child: GestureDetector(
-              onTap: () {
-                userTapped();
-              },
-              child: Container(
-                height: 200,
-                width: 200,
-                color: Colors.deepPurple[200],
-                child: Center(child: Text("Tap Me")),
-              ),
-            ),
-          ),
-        ));
+        home: FirstPage(),
+        routes: {
+          'firstpage': (context) => FirstPage(),
+          '/secondpage': (context) => SecondPage(),
+        });
   }
 }

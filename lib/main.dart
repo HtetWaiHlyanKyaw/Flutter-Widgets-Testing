@@ -58,32 +58,23 @@ class MyApp extends StatelessWidget {
           //     // ),
           //   ),
           // ),
-          body: Column(
+          body: ListView(
         // mainAxisAlignment: MainAxisAlignment.start,
         // crossAxisAlignment: CrossAxisAlignment.start,
+        scrollDirection: Axis.horizontal,
         children: [
-          Expanded(
-            child: Container(
-              // height: 200,
-              // width: 200,
-              color: Colors.deepPurple,
-            ),
+          Container(
+            width: 350,
+            color: Colors.deepPurple,
           ),
-          Expanded(
-            flex: 3,
-            child: Container(
-              // height: 200,
-              // width: 200,
-              color: Colors.deepPurple[400],
-            ),
+          Container(
+            width: 350,
+            color: Colors.deepPurple[400],
           ),
-          Expanded(
-            child: Container(
-              // height: 200,
-              // width: 200,
-              color: Colors.deepPurple[200],
-            ),
-          ),
+          Container(
+            width: 350,
+            color: Colors.deepPurple[200],
+          )
         ],
       )),
     );

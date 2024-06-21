@@ -2,7 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:new_project/pages/first_page.dart';
-import 'package:new_project/pages/second_page.dart';
+import 'package:new_project/pages/home_page.dart';
+import 'package:new_project/pages/settings_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,10 +12,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  void userTapped() {
-    print("User Tapped");
-  }
-
   // List names = ["Htet Wai", "Thiri"];
   @override
   Widget build(BuildContext context) {
@@ -22,8 +19,9 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: FirstPage(),
         routes: {
-          'firstpage': (context) => FirstPage(),
-          '/secondpage': (context) => SecondPage(),
+          '/firstpage': (context) => FirstPage(),
+          '/homepage': (context) => HomePage(),
+          '/settingspage': (context) => SettingsPage(),
         });
   }
 }
